@@ -10,7 +10,7 @@ import cn.algorithms.util.ArrayUtil;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int testTime = 500000;
+        int testTime = 50000;
         int maxValue = 100;
         int maxSize = 100;
         boolean succeed = true;
