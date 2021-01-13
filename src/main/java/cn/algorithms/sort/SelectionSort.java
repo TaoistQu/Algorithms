@@ -8,10 +8,6 @@ import cn.algorithms.util.ArrayUtil;
  * @date 2021/1/13 23:00
  */
 public class SelectionSort {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 选择排序
      * // 0 ~ N-1  找到最小值，在哪，放到0位置上
@@ -20,6 +16,9 @@ public class SelectionSort {
      * @param arr
      */
     public static void selectionSort(int[] arr){
+        if(arr == null || arr.length<2){
+            return;
+        }
         for(int i = 0;i<arr.length-1;i++){
             int minIndex =i;
             for(int j =i+1;j<arr.length;j++){

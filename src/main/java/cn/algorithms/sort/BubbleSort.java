@@ -9,28 +9,6 @@ import cn.algorithms.util.ArrayUtil;
  * @data 2020-07-27 00:00
  */
 public class BubbleSort {
-    public static void main(String[] args) {
-        int testTime = 500000;
-        int maxValue = 100;
-        int maxSize = 100;
-        boolean succeed = true;
-        for (int i = 0; i < testTime; i++) {
-            int[] arr1 = ArrayUtil.generateRandomArray(maxSize, maxValue);
-            int[] arr2 = ArrayUtil.copyArray(arr1);
-            bubbleSort(arr1);
-            ArrayUtil.comparator(arr2);
-            if (!ArrayUtil.isEqual(arr1, arr2)) {
-                succeed = false;
-                break;
-            }
-        }
-        System.out.println(succeed ? "Nice" : "Fucking fucked!");
-        int[] arr = ArrayUtil.generateRandomArray(maxSize, maxValue);
-        ArrayUtil.printArray(arr);
-        bubbleSort(arr);
-        ArrayUtil.printArray(arr);
-    }
-
     /**
      * 冒泡排序
      *
