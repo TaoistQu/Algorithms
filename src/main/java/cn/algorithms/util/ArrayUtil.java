@@ -49,7 +49,7 @@ public class ArrayUtil {
         //Math.random()*N ->[0,N)
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) ((maxValue + 1) * Math.random());
+            arr[i] = NumberUtil.randomValue(maxValue);
         }
         return arr;
     }
@@ -92,5 +92,22 @@ public class ArrayUtil {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    /**
+     * 测试一个有序数组中是否存在指定数值
+     * @param sortedArr
+     * @param num
+     * @return
+     */
+    public static boolean testExit(int[] sortedArr,int num){
+        if(sortedArr == null)
+            return false;
+        for (int cur:sortedArr) {
+            if(cur == num){
+                return true;
+            }
+        }
+        return false;
     }
 }
