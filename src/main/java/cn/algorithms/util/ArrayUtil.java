@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class ArrayUtil {
     /**
-     * 交换数组两位置上的值 (这个地方有个坑，必须要两个数不相等才行)
+     * 交换数组两位置上的值 (这个地方有个坑，必须要两个数不在同一位置才行)
      *
      * @param arr
      * @param i

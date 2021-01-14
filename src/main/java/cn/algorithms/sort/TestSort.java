@@ -7,7 +7,7 @@ import cn.algorithms.util.ArrayUtil;
  * @version 1.0
  * @date 2021/1/13 23:09
  */
-public class Test {
+public class TestSort {
     public static void main(String[] args) {
         int testTime = 500000;
         int maxValue = 100;
@@ -29,6 +29,5 @@ public class Test {
                 ArrayUtil.printArray(arr1);
         }
         System.out.println(succeed ? "Nice" : "Fucking fucked!");
-
     }
 }
