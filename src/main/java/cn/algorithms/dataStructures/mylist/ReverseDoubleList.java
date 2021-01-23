@@ -1,5 +1,7 @@
 package cn.algorithms.dataStructures.mylist;
 
+import cn.algorithms.util.ListUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,14 +19,14 @@ public class ReverseDoubleList {
         int testTime = 100000;
         System.out.println("test begin!");
         for(int i =0;i<testTime;i++) {
-            DoubleNode node3 = generateRandomDoubleList(len, value);
+            DoubleNode node3 = ListUtil.generateRandomDoubleList(len, value);
             List<Integer> list3 = getDoubleListOriginOrder(node3);
             node3 = reverseDoubleList(node3);
             if (!checkDoubleListReverse(list3, node3)) {
                 System.out.println("Oops3!");
             }
 
-            DoubleNode node4 = generateRandomDoubleList(len, value);
+            DoubleNode node4 = ListUtil.generateRandomDoubleList(len, value);
             List<Integer> list4 = getDoubleListOriginOrder(node4);
             node4 = reverseDoubleList(node4);
             if (!checkDoubleListReverse(list4, node4)) {
@@ -75,24 +77,6 @@ public class ReverseDoubleList {
         return list.get(N - 1);
     }
 
-    public static DoubleNode<Integer> generateRandomDoubleList(int len, int value) {
-        int size = (int) (Math.random() * (len + 1));
-        if (size == 0) {
-            return null;
-        }
-        size--;
-        DoubleNode head = new DoubleNode((int) (Math.random() * (value + 1)));
-        DoubleNode pre = head;
-        while (size != 0) {
-            DoubleNode cur = new DoubleNode((int) (Math.random() * (value + 1)));
-            pre.next = cur;
-            cur.last = pre;
-            pre = cur;
-            size--;
-        }
-        return head;
-    }
-
     public static boolean checkDoubleListReverse(List<Integer> origin, DoubleNode<Integer> head) {
         DoubleNode end = null;
         for (int i = origin.size() - 1; i >= 0; i--) {
@@ -120,19 +104,4 @@ public class ReverseDoubleList {
         return ans;
     }
 
-
-    /**
-     * 封装双向链表节点
-     *
-     * @param <T>
-     */
-    public static class DoubleNode<T> {
-        public T value;
-        public DoubleNode last;
-        public DoubleNode next;
-
-        public DoubleNode(T data) {
-            value = data;
-        }
-    }
 }

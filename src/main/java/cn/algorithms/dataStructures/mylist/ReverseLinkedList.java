@@ -1,5 +1,7 @@
 package cn.algorithms.dataStructures.mylist;
 
+import cn.algorithms.util.ListUtil;
+
 import java.util.ArrayList;
 
 /**
@@ -15,7 +17,7 @@ public class ReverseLinkedList {
         int value = 100;
         int testTime = 10000000;
         for (int i = 0; i < testTime; i++) {
-            Node node1 = generateRandomLinkedList(len, value);
+            Node node1 = ListUtil.generateRandomLinkedList(len, value);
             Node reverse1 = reverseLinkedList(node1);
             Node back1 = testReverseLinkedList(reverse1);
             if (!checkLinkedListEqual(node1, back1)) {
@@ -68,23 +70,6 @@ public class ReverseLinkedList {
         return list.get(N - 1);
     }
 
-    public static Node<Integer> generateRandomLinkedList(int len, int value) {
-        int size = (int) (Math.random() * (len + 1));
-        if (size == 0) {
-            return null;
-        }
-        size--;
-        Node<Integer> head = new Node((int) (Math.random() * (value + 1)));
-        Node<Integer> pre = head;
-        while (size != 0) {
-            Node<Integer> cur = new Node<>((int) (Math.random() * (value + 1)));
-            pre.next = cur;
-            pre = cur;
-            size--;
-        }
-        return head;
-    }
-
     public static boolean checkLinkedListEqual(Node<Integer> head1, Node<Integer> head2) {
         while (head1 != null && head2 != null) {
             if (head1.value != head2.value)
@@ -95,18 +80,4 @@ public class ReverseLinkedList {
         return head1 == null && head2 == null;
     }
 
-
-    /**
-     * 封装单链表节点
-     *
-     * @param <T>
-     */
-    public static class Node<T> {
-        public T value;
-        public Node next;
-
-        public Node(T data) {
-            value = data;
-        }
-    }
 }
