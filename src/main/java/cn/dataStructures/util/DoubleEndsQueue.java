@@ -1,8 +1,8 @@
-package cn.dataStructures.queue;
-
-import cn.dataStructures.util.DoubleNode;
+package cn.dataStructures.util;
 
 /**
+ * 双向链表实现双向添加删除元素
+ *
  * @author TaoistQu
  * @version 1.0
  * @date 2021/1/28 23:25
