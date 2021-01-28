@@ -1,4 +1,4 @@
-package cn.algorithms.dataStructures.mylist;
+package cn.dataStructures.util;
 
 /**
  * @author TaoistQu
@@ -7,8 +7,8 @@ package cn.algorithms.dataStructures.mylist;
  */
 public class DoubleNode<T>{
     public T value;
-    public DoubleNode last;
-    public DoubleNode next;
+    public DoubleNode<T> last;
+    public DoubleNode<T> next;
 
     public DoubleNode(T data) {
         value = data;

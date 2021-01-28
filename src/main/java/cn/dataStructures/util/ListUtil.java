@@ -1,7 +1,4 @@
-package cn.algorithms.util;
-
-import cn.algorithms.dataStructures.mylist.DoubleNode;
-import cn.algorithms.dataStructures.mylist.Node;
+package cn.dataStructures.util;
 
 /**
  * @author TaoistQu

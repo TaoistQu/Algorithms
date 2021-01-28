@@ -1,6 +1,7 @@
-package cn.algorithms.dataStructures.mylist;
+package cn.dataStructures.mylist;
 
-import cn.algorithms.util.ListUtil;
+import cn.dataStructures.util.ListUtil;
+import cn.dataStructures.util.Node;
 
 /**
  * 删除链表中给定值

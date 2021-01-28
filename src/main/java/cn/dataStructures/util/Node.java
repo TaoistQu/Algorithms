@@ -1,4 +1,4 @@
-package cn.algorithms.dataStructures.mylist;
+package cn.dataStructures.util;
 
 /**
  * @author TaoistQu
@@ -7,7 +7,7 @@ package cn.algorithms.dataStructures.mylist;
  */
 public class Node<T> {
     public T value;
-    public Node<Integer> next;
+    public Node<T> next;
 
     public Node(T data) {
         value = data;
