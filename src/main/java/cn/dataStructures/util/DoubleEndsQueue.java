@@ -89,4 +89,5 @@ public class DoubleEndsQueue<T> {
     public boolean isEmpty() {
         return head == null;
     }
+
 }
