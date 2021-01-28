@@ -1,4 +1,4 @@
-package cn.dataStructures.mylist;
+package cn.dataStructures.list;
 
 import cn.dataStructures.util.DoubleNode;
 import cn.dataStructures.util.ListUtil;
