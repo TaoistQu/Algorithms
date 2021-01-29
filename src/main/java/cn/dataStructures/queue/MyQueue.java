@@ -24,5 +24,4 @@ public class MyQueue<T> {
         return queue.isEmpty();
     }
 
-
 }

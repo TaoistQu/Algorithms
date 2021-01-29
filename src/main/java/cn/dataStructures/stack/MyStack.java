@@ -1,9 +1,6 @@
 package cn.dataStructures.stack;
 
-import cn.dataStructures.util.CompareUtil;
 import cn.dataStructures.util.DoubleEndsQueue;
-
-import java.util.Stack;
 
 /**
  * 栈
@@ -30,7 +27,5 @@ public class MyStack<T> {
     public boolean isEmpty() {
         return queue.isEmpty();
     }
-
-
 
 }

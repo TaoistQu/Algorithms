@@ -1,6 +1,7 @@
 package cn.dataStructures.util;
 
 import cn.dataStructures.queue.RingArrayQueue;
+import cn.dataStructures.stack.TwoQueueImplementStack;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,12 +13,14 @@ import java.util.Queue;
  */
 public class TestQueue {
     public static void main(String[] args) {
+        System.out.println("test begin");
         int oneTestDataNum = 100;
         int value = 10000;
         int testTimes = 100000;
         for (int i = 0; i < testTimes; i++) {
             //MyQueue<Integer> myQueue = new MyQueue<>();
             RingArrayQueue myQueue = new RingArrayQueue(10);
+
             Queue<Integer> queue = new LinkedList<>();
             for (int j = 0; j < oneTestDataNum; j++) {
                 int numq = (int) (Math.random() * value);
