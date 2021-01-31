@@ -2,8 +2,6 @@ package cn.algorithms.recursion;
 
 import cn.algorithms.util.ArrayUtil;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 /**
  * 测试递归
  *

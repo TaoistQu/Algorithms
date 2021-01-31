@@ -18,7 +18,9 @@ public class TestSort {
             int[] arr2 = ArrayUtil.copyArray(arr1);
            // BubbleSort.bubbleSort(arr1);
            // SelectionSort.selectionSort(arr1);
-            InsertionSort.insertionSort(arr1);
+            //InsertionSort.insertionSort(arr1);
+            //MergeSort.mergeSort1(arr1);
+            MergeSort.mergeSort2(arr1);
             ArrayUtil.comparator(arr2);
             if (!ArrayUtil.isEqual(arr1, arr2)) {
                 succeed = false;
