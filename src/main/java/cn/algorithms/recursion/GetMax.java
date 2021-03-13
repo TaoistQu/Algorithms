@@ -10,6 +10,7 @@ import cn.algorithms.util.ArrayUtil;
  * @date 2021/1/30 22:46
  */
 public class GetMax {
+
     public static void main(String[] args) {
         int[] arr = ArrayUtil.generateRandomArray(30, 100);
         int max = getMax(arr);
