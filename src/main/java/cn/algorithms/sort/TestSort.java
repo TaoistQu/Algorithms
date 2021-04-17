@@ -1,5 +1,6 @@
 package cn.algorithms.sort;
 
+import cn.algorithms.sort.merge.MergeSort;
 import cn.algorithms.util.ArrayUtil;
 
 /**测试各种排序算法

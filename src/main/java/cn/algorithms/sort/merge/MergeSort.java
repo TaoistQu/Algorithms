@@ -1,4 +1,4 @@
-package cn.algorithms.sort;
+package cn.algorithms.sort.merge;
 
 /**
  * @author TaoistQu
@@ -50,13 +50,12 @@ public class MergeSort {
                 merge(arr, L, M, R);
                 L = R + 1;
             }
+            //防溢出
             if (mergeSize > N / 2) {
                 break;
             }
             mergeSize <<= 1;
         }
-
-
     }
 
     public static void merge(int[] arr, int L, int M, int R) {
