@@ -6,6 +6,7 @@ import cn.algorithms.util.ArrayUtil;
  * Created with IntelliJ IDEA.
  *
  * @Description: 求一个数组中的逆序对 当一个数组中右边的数比左边的数小时就构成一个逆序对
+ *
  * @Auther: TaoistQu
  * @Date: 2021/04/18/0:16
  */
@@ -20,7 +21,7 @@ public class ReversePair {
             int[] arr1 = ArrayUtil.generateRandomArray(maxSize, maxValue);
             int[] arr2 = ArrayUtil.copyArray(arr1);
 
-            if (reverPairNumber(arr1) != comparator(arr2)) {
+            if (reversePairs(arr1) != comparator(arr2)) {
                 System.out.println("Oops!");
                 ArrayUtil.printArray(arr1);
                 ArrayUtil.printArray(arr2);
@@ -30,7 +31,7 @@ public class ReversePair {
         System.out.println("测试完成！！！");
     }
 
-    public static int reverPairNumber(int[] arr) {
+    public static int reversePairs(int[] arr) {
         if (arr == null || arr.length < 2) {
             return 0;
         }
