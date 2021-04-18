@@ -6,6 +6,7 @@ import cn.algorithms.util.ArrayUtil;
  * Created with IntelliJ IDEA.
  *
  * @Description: 计算数组中比右边大两倍的数的个数
+ * https://leetcode.com/problems/reverse-pairs/
  * @Auther: TaoistQu
  * @Date: 2021/04/18/14:03
  */
@@ -15,6 +16,7 @@ public class BiggerThanRightTwice {
         int maxSize = 100;
         int maxValue = 100;
         System.out.println("开始测试！！!");
+
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = ArrayUtil.generateRandomArray(maxSize, maxValue);
             int[] arr2 = ArrayUtil.copyArray(arr1);
@@ -25,6 +27,9 @@ public class BiggerThanRightTwice {
             }
         }
         System.out.println("测试完成！！！");
+      int[] test=  new int[]{2147483647,2147483647,2147483647,2147483647,2147483647,2147483647};
+        int i = biggerThanRightTwice(test);
+        System.out.println("i="+i);
     }
 
     public static int biggerThanRightTwice(int[] arr) {
@@ -43,7 +48,7 @@ public class BiggerThanRightTwice {
         int widowR = m + 1;
         //通过索引下标计数
         for (int i = l; i <= m; i++) {
-            while (widowR <= r && arr[i] > (arr[widowR] << 1)) {
+            while ((widowR <= r) &&( arr[i] > ((long)arr[widowR] <<1))) {
                 widowR++;
             }
             ans += widowR - m - 1;
