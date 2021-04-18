@@ -21,7 +21,7 @@ public class RandomQuickSort {
     public static void process(int[] arr, int L, int R) {
         if (L >= R) return;
         ArrayUtil.swap(arr, R, L + (int) (Math.random() * (R - L + 1)));
-        int[] equalArea = NetherlandsFlagQuickSort.netherlandsFlag(arr, L, R);
+        int[] equalArea = NetherLandsFlag.netherlandsFlag(arr, L, R);
         process(arr, L, equalArea[0] - 1);
         process(arr, equalArea[1] + 1, R);
     }
