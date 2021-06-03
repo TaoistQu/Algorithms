@@ -39,5 +39,4 @@ public class HeapUtil {
             left = index * 2 + 1;
         }
     }
-
 }

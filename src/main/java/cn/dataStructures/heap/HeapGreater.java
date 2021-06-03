@@ -73,6 +73,11 @@ public class HeapGreater<T> {
         heapify(indexMap.get(obj));
     }
 
+    /**
+     * 返回堆上所有元素
+     *
+     * @return 所有元素列表
+     */
     public List<T> getAllElements() {
         List<T> ans = new ArrayList<>();
         for (T c : heap) {
