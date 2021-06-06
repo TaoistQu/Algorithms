@@ -54,6 +54,15 @@ public class ArrayUtil {
         return arr;
     }
 
+    public static int[] generatePositiveRandomArray(int maxSize, int maxValue) {
+        int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = NumberUtil.positiveRandomValue(maxValue);
+        }
+        return arr;
+    }
+
+
     public static int[] copyArray(int[] arr) {
         if (arr == null) {
             return null;
@@ -96,15 +105,16 @@ public class ArrayUtil {
 
     /**
      * 测试一个有序数组中是否存在指定数值
+     *
      * @param sortedArr
      * @param num
      * @return
      */
-    public static boolean testExit(int[] sortedArr,int num){
-        if(sortedArr == null)
+    public static boolean testExit(int[] sortedArr, int num) {
+        if (sortedArr == null)
             return false;
-        for (int cur:sortedArr) {
-            if(cur == num){
+        for (int cur : sortedArr) {
+            if (cur == num) {
                 return true;
             }
         }

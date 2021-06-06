@@ -1,7 +1,7 @@
 package cn.algorithms.sort;
 
 import cn.algorithms.sort.heap.HeapSort;
-import cn.algorithms.sort.quick.UnRecursiveQuickSort;
+import cn.algorithms.sort.radix.CountSort;
 import cn.algorithms.util.ArrayUtil;
 
 /**
@@ -18,7 +18,8 @@ public class TestSort {
         int maxSize = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = ArrayUtil.generateRandomArray(maxSize, maxValue);
+            // int[] arr1 = ArrayUtil.generateRandomArray(maxSize, maxValue);
+            int[] arr1 = ArrayUtil.generatePositiveRandomArray(maxSize, maxValue);
             int[] arr2 = ArrayUtil.copyArray(arr1);
             // BubbleSort.bubbleSort(arr1);
             // SelectionSort.selectionSort(arr1);
@@ -27,7 +28,8 @@ public class TestSort {
             //MergeSort.mergeSort2(arr1);
             // UnRecursiveQuickSort.quickSort(arr1);
             // HeapSort.heapBottom(arr1);
-            HeapSort.heapTopSort(arr1);
+            CountSort.countSort(arr1);
+            // HeapSort.heapTopSort(arr1);
             ArrayUtil.comparator(arr2);
             if (!ArrayUtil.isEqual(arr1, arr2)) {
                 succeed = false;
