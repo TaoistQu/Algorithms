@@ -1,4 +1,6 @@
-package cn.dataStructures.tree.node;
+package cn.dataStructures.tree;
+
+import cn.dataStructures.tree.node.Node;
 
 /**
  * Created with IntelliJ IDEA.
@@ -81,5 +83,6 @@ public class TrieTreeHash {
         }
         return node.pass;
     }
+
 
 }
