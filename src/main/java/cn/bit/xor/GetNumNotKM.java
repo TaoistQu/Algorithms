@@ -1,4 +1,4 @@
-package cn.algorithms.xor;
+package cn.bit.xor;
 
 import cn.algorithms.util.ArrayUtil;
 import cn.algorithms.util.NumberUtil;

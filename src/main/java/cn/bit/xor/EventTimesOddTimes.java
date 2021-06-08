@@ -1,4 +1,4 @@
-package cn.algorithms.xor;
+package cn.bit.xor;
 
 /**
  * 异或操作

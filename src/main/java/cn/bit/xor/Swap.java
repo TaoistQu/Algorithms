@@ -1,4 +1,4 @@
-package cn.algorithms.xor;
+package cn.bit.xor;
 
 /**
  *   异或运算：相同为0，不同为1
