@@ -1,6 +1,6 @@
 package cn.dataStructures.list;
 
-import cn.algorithms.util.NumberUtil;
+import cn.dataStructures.list.util.Node;
 
 import java.util.ArrayList;
 
@@ -12,14 +12,7 @@ import java.util.ArrayList;
  * @Date: 2021/06/07/0:21
  */
 public class LinkedListMid {
-    public static class Node {
-        public int value;
-        public Node next;
 
-        public Node(int v) {
-            value = v;
-        }
-    }
 
     /**
      * 输入链表头节点，奇数长度返回中点，偶数长度返回上中点
