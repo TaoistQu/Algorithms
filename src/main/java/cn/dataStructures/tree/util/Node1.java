@@ -1,4 +1,4 @@
-package cn.dataStructures.tree.node;
+package cn.dataStructures.tree.util;
 
 /**
  * Created with IntelliJ IDEA.

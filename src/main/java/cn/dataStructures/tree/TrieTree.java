@@ -1,6 +1,6 @@
 package cn.dataStructures.tree;
 
-import cn.dataStructures.tree.node.Node1;
+import cn.dataStructures.tree.util.Node1;
 
 /**
  * Created with IntelliJ IDEA.
