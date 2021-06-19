@@ -90,7 +90,7 @@ public class TreeMaxWidth {
     public static void main(String[] args) {
         int maxLevel = 10;
         int maxValue = 100;
-        int testTimes = 1000000000;
+        int testTimes = 10000000;
         for (int i = 0; i < testTimes; i++) {
             TreeNode head = TreeUtil.generateRandomBST(maxLevel, maxValue);
             if (maxWidthNoMap(head) != maxWidthUseMap(head)) {
