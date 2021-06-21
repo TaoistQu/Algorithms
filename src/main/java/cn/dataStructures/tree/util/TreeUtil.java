@@ -1,5 +1,7 @@
 package cn.dataStructures.tree.util;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -20,6 +22,25 @@ public class TreeUtil {
         head.left = generate(level + 1, maxLevel, maxvalue);
         head.right = generate(level + 1, maxLevel, maxvalue);
         return head;
+    }
+
+    public static TreeNode pickRandomOne(TreeNode head) {
+        if (head == null) {
+            return null;
+        }
+        ArrayList<TreeNode> arr = new ArrayList<>();
+        filPrelist(head, arr);
+        int randomIndex = (int) (Math.random() * arr.size());
+        return arr.get(randomIndex);
+    }
+
+    public static void filPrelist(TreeNode head, ArrayList<TreeNode> arr) {
+        if (head == null) {
+            return;
+        }
+        arr.add(head);
+        filPrelist(head.left, arr);
+        filPrelist(head.right, arr);
     }
 
     public static boolean isSameValueStructure(TreeNode head1, TreeNode head2) {
