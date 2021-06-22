@@ -79,4 +79,33 @@ public class TreeUtil {
         return buf.toString();
     }
 
+    /**
+     * 随机构建多叉树
+     *
+     * @param maxLevel
+     * @param maxNexts
+     * @param maxValue
+     * @return
+     */
+    public static NNode genarateNTree(int maxLevel, int maxNexts, int maxValue) {
+        if (Math.random() < 0.02) {
+            return null;
+        }
+        NNode head = new NNode((int) (Math.random() * (maxValue + 1)), new ArrayList<>());
+        genarateNexts(head, 1, maxLevel, maxNexts, maxValue);
+        return head;
+    }
+
+    public static void genarateNexts(NNode head, int level, int maxLevel, int maxNexts, int maxValue) {
+        if (level > maxLevel) {
+            return;
+        }
+        int nextsSize = (int) (Math.random()) * (maxNexts + 1);
+        for (int i = 0; i < nextsSize; i++) {
+            NNode next = new NNode((int) (Math.random() * (maxValue + 1)), new ArrayList<>());
+            head.children.add(next);
+            genarateNexts(next, level + 1, maxLevel, maxNexts, maxValue);
+        }
+    }
+
 }
