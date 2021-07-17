@@ -127,14 +127,27 @@ public class NumberOfIslands {
             }
         }
 
+        /*
+                public Node<V> findFather(Node<V> cur) {
+                    Stack<Node<V>> path = new Stack<>();
+                    while (cur != parents.get(cur)) {
+                        path.push(cur);
+                        cur = parents.get(cur);
+                    }
+                    while (!path.isEmpty()) {
+                        parents.put(path.pop(), cur);
+                    }
+                    return cur;
+                }
+        */
         public Node<V> findFather(Node<V> cur) {
-            Stack<Node<V>> path = new Stack<>();
+            List<Node<V>> path = new ArrayList<>();
             while (cur != parents.get(cur)) {
-                path.push(cur);
+                path.add(cur);
                 cur = parents.get(cur);
             }
-            while (!path.isEmpty()) {
-                parents.put(path.pop(), cur);
+            for (Node<V> jj : path) {
+                parents.put(jj, cur);
             }
             return cur;
         }
@@ -315,8 +328,8 @@ public class NumberOfIslands {
 
         System.out.println();
 
-        row = 10000;
-        col = 10000;
+        row = 1000;
+        col = 1000;
         board1 = generateRandomMatrix(row, col);
         board3 = copy(board1);
         System.out.println("感染方法、并查集(数组实现)的运行结果和运行时间");
@@ -328,7 +341,7 @@ public class NumberOfIslands {
         System.out.println("感染方法的运行时间: " + (end - start) + " ms");
 
         start = System.currentTimeMillis();
-        System.out.println("并查集(数组实现)的运行结果: " + numIslands2(board3));
+        System.out.println("并查集(数组实现)的运行结果: " + numIslands1(board3));
         end = System.currentTimeMillis();
         System.out.println("并查集(数组实现)的运行时间: " + (end - start) + " ms");
 
