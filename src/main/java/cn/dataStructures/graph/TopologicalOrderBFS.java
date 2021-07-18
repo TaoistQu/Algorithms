@@ -1,5 +1,7 @@
 package cn.dataStructures.graph;
 
+import cn.dataStructures.graph.util.DirectedGraphNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -13,15 +15,6 @@ import java.util.Queue;
  * @Date: 2021/07/18/23:15
  */
 public class TopologicalOrderBFS {
-    public static class DirectedGraphNode {
-        public int label;
-        public ArrayList<DirectedGraphNode> neighbors;
-
-        public DirectedGraphNode(int x) {
-            label = x;
-            neighbors = new ArrayList<>();
-        }
-    }
 
     public static ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
         HashMap<DirectedGraphNode, Integer> indegreeMap = new HashMap<>();
