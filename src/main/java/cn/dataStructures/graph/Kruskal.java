@@ -97,5 +97,4 @@ public class Kruskal {
         return result;
     }
 
-
 }

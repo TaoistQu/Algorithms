@@ -11,6 +11,10 @@ import java.util.HashSet;
  * @Date: 2021/07/17/19:27
  */
 public class Graph {
+    /**
+     * key节点值
+     * valueNode 节点
+     */
     public HashMap<Integer, Node> nodes;
     public HashSet<Edge> edges;
 
