@@ -60,9 +60,7 @@ public class RadixSort {
         }
         return res;
     }
-
     private static int getDigit(int x, int d) {
         return ((x / ((int) Math.pow(10, d - 1))) % 10);
     }
-
 }

@@ -15,7 +15,7 @@ import java.util.PriorityQueue;
 public class SortArrayDistanceLessK {
     /**
      * @param arr
-     * @param k
+     * @param k   最大移动的距离
      */
     public static void sortArrayDistanceLessK(int[] arr, int k) {
         if (k == 0) return;
