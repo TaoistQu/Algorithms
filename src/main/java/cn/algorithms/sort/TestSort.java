@@ -2,6 +2,7 @@ package cn.algorithms.sort;
 
 import cn.algorithms.sort.heap.HeapSort;
 import cn.algorithms.sort.radix.CountSort;
+import cn.algorithms.sort.radix.RadixSort;
 import cn.algorithms.util.ArrayUtil;
 
 /**
@@ -14,7 +15,7 @@ import cn.algorithms.util.ArrayUtil;
 public class TestSort {
     public static void main(String[] args) {
         int testTime = 500000;
-        int maxValue = 100;
+        int maxValue = 100000;
         int maxSize = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
@@ -28,7 +29,8 @@ public class TestSort {
             //MergeSort.mergeSort2(arr1);
             // UnRecursiveQuickSort.quickSort(arr1);
             // HeapSort.heapBottom(arr1);
-            CountSort.countSort(arr1);
+            //CountSort.countSort(arr1);
+            RadixSort.radixSort(arr1);
             // HeapSort.heapTopSort(arr1);
             ArrayUtil.comparator(arr2);
             if (!ArrayUtil.isEqual(arr1, arr2)) {
