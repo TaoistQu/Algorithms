@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Created with IntelliJ IDEA.
  *
- * @Description:
+ * @Description: 只是用栈不用额外的容器逆转栈
  * @Auther: TaoistQu
  * @Date: 2021/09/05/16:01
  */
