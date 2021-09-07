@@ -84,6 +84,15 @@ public class RobotWalk {
         return ans;
     }
 
+    /**
+     * 根据数值填充方式进行填值，状态转移法
+     *
+     * @param N
+     * @param start
+     * @param aim
+     * @param K
+     * @return
+     */
     public static int ways3(int N, int start, int aim, int K) {
         if (N < 2 || start < 1 || start > N || aim < 1 || aim > N || K < 1) {
             return -1;
@@ -105,5 +114,4 @@ public class RobotWalk {
         System.out.println(ways2(5, 2, 4, 6));
         System.out.println(ways3(5, 2, 4, 6));
     }
-
 }
